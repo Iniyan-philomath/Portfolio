@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================
+   GOOGLE FONT VARIABLES
+=========================== */
+
+:root{
+
+    --bg:#050816;
+    --bg2:#0B1120;
+
+    --primary:#00E5FF;
+    --secondary:#64FFDA;
+
+    --white:#F8FAFC;
+    --gray:#94A3B8;
+
+    --card:#111827;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+
+    color:white;
+
+    overflow-x:hidden;
+
+    font-family:Inter,sans-serif;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b1120;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00E5FF;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64FFDA;
+
+}
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+section{
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.title{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+.subtitle{
+
+    color:var(--primary);
+
+    font-size:1.3rem;
+
+    margin-top:15px;
+
+}
+
+.heading{
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+}
+
+p{
+
+    line-height:1.8;
+
+    color:#CBD5E1;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.primary-btn{
+
+    margin-top:30px;
+
+    padding:16px 36px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#00E5FF;
+
+    color:black;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px #00E5FF;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+.glow{
+
+    box-shadow:
+
+    0 0 20px rgba(0,229,255,.4),
+
+    0 0 40px rgba(0,229,255,.2);
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+
+    background:#00E5FF;
+
+    color:black;
+
+}
+
+/* ===========================
+   HERO BACKGROUND
+=========================== */
+
+.hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(circle at top left,#00E5FF20,transparent 30%),
+
+    radial-gradient(circle at bottom right,#64FFDA20,transparent 30%),
+
+    linear-gradient(180deg,#050816,#0B1120);
+
+}
+
+/* ===========================
+   PCB GRID
+=========================== */
+
+.grid-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+
+    background-size:50px 50px;
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.float{
+
+    animation:float 5s infinite;
+
+}
+
+/* ===========================
+   FADE
+=========================== */
+
+.fade{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.title{
+
+font-size:2.8rem;
+
+}
+
+.heading{
+
+font-size:2rem;
+
+}
+
+.subtitle{
+
+font-size:1rem;
+
+}
+
+.container{
+
+width:95%;
+
+}
+
+}
